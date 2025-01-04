@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Patient Dashboard</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .market-updates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px auto;
+      max-width: 1200px;
+    }
+
+    .market-update-gd {
+      flex: 1 1 calc(33.3% - 20px);
+      min-width: 300px;
+    }
+
+    .market-update-block {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      position: relative;
+    }
+
+    .market-update-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .market-update-block h3 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .market-update-block h4 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .market-update-right {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+    }
+
+    .market-update-right i {
+      font-size: 4em;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+      transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+    }
+
+    .section {
+      background: #fff;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .section h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      color: white;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!-- Market Updates -->
+  <div class="market-updates">
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block">
+        <h3>{{ doctorName || "Dr. John Doe" }}</h3>
+        <h4>Sponsor Name</h4>
+        <div class="market-update-right">
+          <i class="fa fa-user-o"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block">
+        <h3>{{ symptoms || "Cold & Fever" }}</h3>
+        <h4>Disease</h4>
+        <div class="market-update-right">
+          <i class="fa fa-info-circle"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block">
+        <h3>{{ doctorMobile || "+1 234 567 890" }}</h3>
+        <h4>Sponsor Mobile</h4>
+        <div class="market-update-right">
+          <i class="fa fa-mobile"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="market-updates">
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block">
+        <h3>{{ doctorAddress || "123 Main Street" }}</h3>
+        <h4>Doctor Address</h4>
+        <div class="market-update-right">
+          <i class="fa fa-map-marker"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block">
+        <h3>{{ doctorDepartment || "Cardiology" }}</h3>
+        <h4>Doctor Department</h4>
+        <div class="market-update-right">
+          <i class="fa fa-list-alt"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 market-update-gd">
+      <div class="market-update-block">
+        <h3>{{ admitDate || "01 Dec 2024" }}</h3>
+        <h4>Admit Date</h4>
+        <div class="market-update-right">
+          <i class="fa fa-calendar-o"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Sections -->
+  <div class="section">
+    <h2>Chat with Sponsor</h2>
+    <a href="#" class="btn">Start Chat</a>
+  </div>
+
+  <div class="section">
+    <h2>View Sponsor List</h2>
+    <a href="#" class="btn">View List</a>
+  </div>
+
+  <div class="section">
+    <h2>Add Video Testimonial</h2>
+    <a href="#" class="btn">Upload Video</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    
+  </footer>
+
+</body>
+
+</html>

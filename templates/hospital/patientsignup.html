@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Registration</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #66a2de;
+    }
+
+    /* Container for the form */
+    .register-form {
+      background-color: #a5b7f0;
+      margin: 50px auto;
+      padding: 30px;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #00bcd4, #8e44ad);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    /* Form field styles */
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+
+    .form-group input[type="file"] {
+      padding: 10px;
+    }
+
+    .form-group input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    /* Submit button */
+    .btnSubmit {
+      width: 100%;
+      padding: 14px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btnSubmit:hover {
+      background-color: #27ae60;
+    }
+
+    /* Login Link */
+    .login-link {
+      margin-top: 15px;
+      color: #fff;
+    }
+
+    .login-link a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Guidelines Section */
+    .guidelines {
+      margin-top: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .guidelines h3 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .guidelines p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .register-form {
+        padding: 20px;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="register-form">
+    <h2>Register as a Patient</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <!-- Username -->
+      <div class="form-group">
+        <label for="username" style="color: white;">Username</label>
+        <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password" style="color: white;">Password</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email" style="color: white;">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="form-group">
+        <label for="profile_pic" style="color: white;">Profile Picture</label>
+        <input type="file" name="profile_pic" id="profile_pic" class="form-control">
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address" style="color: white;">Address</label>
+        <input type="text" name="address" id="address" class="form-control" placeholder="Enter your address" required>
+      </div>
+
+      <!-- Mobile -->
+      <div class="form-group">
+        <label for="mobile" style="color: white;">Mobile</label>
+        <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Enter your mobile number" required>
+      </div>
+
+      <!-- Disease -->
+      <div class="form-group">
+        <label for="disease" style="color: white;">Disease</label>
+        <input type="text" name="disease" id="disease" class="form-control" placeholder="Enter your disease" required>
+      </div>
+
+      <!-- Hospital -->
+      <div class="form-group">
+        <label for="hospital" style="color: white;">Hospital</label>
+        <input type="text" name="hospital" id="hospital" class="form-control" placeholder="Enter hospital name" required>
+      </div>
+
+      <!-- Medical Expense -->
+      <div class="form-group">
+        <label for="medical_expense" style="color: white;">Medical Expense</label>
+        <input type="text" name="medical_expense" id="medical_expense" class="form-control" placeholder="Enter medical expense" required>
+      </div>
+
+      <!-- Income -->
+      <div class="form-group">
+        <label for="income" style="color: white;">Income</label>
+        <input type="text" name="income" id="income" class="form-control" placeholder="Enter your income" required>
+      </div>
+
+      <!-- Proof of Poverty -->
+      <div class="form-group">
+        <label for="proof_of_poverty" style="color: white;">Proof of Poverty</label>
+        <input type="file" name="proof_of_poverty" id="proof_of_poverty" class="form-control" required>
+      </div>
+
+      <!-- Prescription -->
+      <div class="form-group">
+        <label for="prescription" style="color: white;">Prescription</label>
+        <input type="file" name="prescription" id="prescription" class="form-control" required>
+      </div>
+
+      <!-- Bill -->
+      <div class="form-group">
+        <label for="bill" style="color: white;">Bill</label>
+        <input type="file" name="bill" id="bill" class="form-control" required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btnSubmit">Register</button>
+
+      <!-- Login Link -->
+      <div class="login-link">
+        Already have an account? <a href="/patientlogin">Login here</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Guidelines Section -->
+  <div class="guidelines">
+    <h3>Guidelines and Eligibility Criteria</h3>
+    <p><strong>Eligibility:</strong> To be eligible for registration as a patient, you must meet the following criteria:</p>
+    <ul>
+      <li>You must be a resident of the country in which you are registering.</li>
+      <li>Only individuals with genuine medical needs are eligible.</li>
+      <li>You must submit the required documents including income proof, medical history, and prescription.</li>
+    </ul>
+    <p><strong>Important Notes:</strong></p>
+    <ul>
+      <li>Your registration will be considered incomplete if any required document is missing.</li>
+      <li>The hospital reserves the right to verify the information provided during registration.</li>
+      <li>Ensure all personal information is correct and up to date.</li>
+    </ul>
+    <p>By clicking "Register", you agree to comply with all hospital terms and conditions.</p>
+  </div>
+
+</body>
+
+</html>

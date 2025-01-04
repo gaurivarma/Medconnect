@@ -1,0 +1,117 @@
+{% extends 'hospital/doctor_base.html' %}
+{% load static %}
+{% block content %}
+{% include 'hospital/doctor_dashboard_cards.html' %}
+<br><br><br><br>
+<div class="container">
+  <div class="row">
+
+    <!-- Recent Requests Section -->
+    <div class="panel panel-primary col-md-10 col-md-offset-1">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">Recent Requests For You</h6>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Picture</th>
+            <th>Description</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dummy Rows for Recent Requests -->
+          <tr>
+            <td>John Doe</td>
+            <td><img src="{% static 'hospital/default-profile-pic.jpg' %}" alt="Profile Pic" height="40px" width="40px" /></td>
+            <td>Need a consultation for severe headache.</td>
+            <td>+1 123-456-7890</td>
+            <td>123 Elm St, Springfield</td>
+            <td>2024-12-01</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td><img src="{% static 'hospital/default-profile-pic.jpg' %}" alt="Profile Pic" height="40px" width="40px" /></td>
+            <td>Follow-up for knee surgery.</td>
+            <td>+1 987-654-3210</td>
+            <td>456 Oak St, Springfield</td>
+            <td>2024-12-02</td>
+          </tr>
+          <tr>
+            <td>Samuel Green</td>
+            <td><img src="{% static 'hospital/default-profile-pic.jpg' %}" alt="Profile Pic" height="40px" width="40px" /></td>
+            <td>General checkup.</td>
+            <td>+1 555-555-5555</td>
+            <td>789 Pine St, Springfield</td>
+            <td>2024-12-03</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Message Requests Section (Dummy) -->
+    <div class="panel panel-info col-md-10 col-md-offset-1" style="margin-top:30px;">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">Message Requests</h6>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li>
+            <strong>John Doe:</strong> Request for appointment at 3 PM.
+            <button class="btn btn-success btn-sm" style="float: right;">Accept</button>
+            <button class="btn btn-danger btn-sm" style="float: right; margin-right: 10px;">Decline</button>
+          </li>
+          <li>
+            <strong>Jane Smith:</strong> Request for follow-up consultation.
+            <button class="btn btn-success btn-sm" style="float: right;">Accept</button>
+            <button class="btn btn-danger btn-sm" style="float: right; margin-right: 10px;">Decline</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Check with Patients Section (Dummy) -->
+    <div class="panel panel-info col-md-10 col-md-offset-1" style="margin-top:30px;">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">Check with Patients</h6>
+      </div>
+      <div class="panel-body">
+        <button class="btn btn-info btn-lg" style="width: 100%; font-weight: bold;">View Patient Requests</button>
+      </div>
+    </div>
+
+    <!-- View Certificate Section -->
+    <div class="panel panel-info col-md-10 col-md-offset-1" style="margin-top:30px;">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">View Your Certificate</h6>
+      </div>
+      <div class="panel-body">
+        <a href="#" class="btn btn-primary btn-lg" style="width: 100%; font-weight: bold;">View Your Certificate</a>
+      </div>
+    </div>
+
+    <!-- Badges Section -->
+    <div class="panel panel-info col-md-10 col-md-offset-1" style="margin-top:30px;">
+      <div class="panel-heading" style="text-align:center;">
+        <h6 class="panel-title">Your Badges</h6>
+      </div>
+      <div class="panel-body">
+        <div class="badge" style="background-color: #007bff; color: white; padding: 10px 20px; border-radius: 5px; font-size: 1.2rem; margin: 5px;">
+          Top Donor
+        </div>
+        <div class="badge" style="background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; font-size: 1.2rem; margin: 5px;">
+          100+ Consultations
+        </div>
+        <div class="badge" style="background-color: #ffc107; color: white; padding: 10px 20px; border-radius: 5px; font-size: 1.2rem; margin: 5px;">
+          Verified
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,75 @@
+{% extends 'hospital/homebase.html' %}
+{% block content %}
+<br><br>
+
+<!-- Jumbotron Section with vibrant shades of blue -->
+<div class="jumbotron text-center" style="background: linear-gradient(120deg, #4e73df, #1d5ab5); color: white; padding: 50px 20px; margin-bottom: 0px;">
+  <h1 class="display-4" style="font-size: 3.5rem; font-weight: bold;">Welcome to Med Connect</h1>
+  <p class="lead" style="font-size: 1.3rem;">Hello, Admin! Manage your hospital services efficiently with our advanced features and tools.</p>
+  <hr class="my-4" style="border-top: 3px solid #fff;">
+  <p style="font-size: 1.2rem; line-height: 1.6;">Our platform offers you seamless access to patient management, sponsor coordination, and real-time updates. Get started by signing up or logging in below!</p>
+  <p class="lead">
+    <a class="btn btn-light btn-lg" href="/adminsignup" role="button" style="background-color: #0056b3; color: white; border-radius: 25px;">Sign Up</a>
+    <a class="btn btn-light btn-lg" href="/adminlogin" role="button" style="background-color: #0056b3; color: white; border-radius: 25px;">Login</a>
+  </p>
+</div>
+
+<!-- Additional Information Section with vibrant blue features -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background-color: #f8f9fa;">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="color: #1d5ab5; font-weight: bold;">Manage Patients</h5>
+          <p class="card-text">View, update, and track patient records, health status, and treatment plans.</p>
+          <a href="#" class="btn btn-primary" style="background-color: #0056b3; border-radius: 25px;">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background-color: #f8f9fa;">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="color: #1d5ab5; font-weight: bold;">Sponsor Coordination</h5>
+          <p class="card-text">Connect with sponsors, manage donations, and ensure seamless financial support.</p>
+          <a href="#" class="btn btn-primary" style="background-color: #0056b3; border-radius: 25px;">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background-color: #f8f9fa;">
+        <div class="card-body text-center">
+          <h5 class="card-title" style="color: #1d5ab5 font-weight: bold;">Real-time Updates</h5>
+          <p class="card-text">Get real-time status updates on patients, sponsors, and hospital services.</p>
+          <a href="#" class="btn btn-primary" style="background-color: #0056b3; border-radius: 25px;">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Section with engaging content in blue tones -->
+<div class="container my-5">
+  <h2 class="text-center" style="font-size: 2.5rem; color: #4e73df;">Features That Make Your Job Easier</h2>
+  <div class="row text-center mt-4">
+    <div class="col-md-4">
+      <div class="feature-card" style="background-color: #e9ecef; padding: 30px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+        <h4 style="color: #1d5ab5; font-weight: bold;">Patient Tracking</h4>
+        <p style="color: #6c757d;">Efficiently track patient health progress, appointments, and medical history.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card" style="background-color: #e9ecef; padding: 30px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+        <h4 style=" color: #0056b3; font-weight: bold;">Donations & Funding</h4>
+        <p style="color: #6c757d;">Streamline sponsor contributions and manage funding for patients in need.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-card" style="background-color: #e9ecef; padding: 30px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+        <h4 style="color: #0056b3; font-weight: bold;">Hospital Integration</h4>
+        <p style="color: #6c757d;">Integrate with hospital systems to provide real-time updates and manage services effectively.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

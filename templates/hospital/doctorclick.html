@@ -1,0 +1,40 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Landing Page Section -->
+<div class="jumbotron" style="background-color: #007bff; color: white; padding: 50px 30px; margin-bottom: 0;">
+  <div style="text-align: center;">
+    <h1 class="display-4">Welcome to Med Connect!</h1>
+    <p class="lead">Empowering healthcare with compassion and technology.</p>
+    <hr class="my-4" style="border-color: white;">
+    <p>
+      Join us as a sponsor and make a difference in the lives of those who need it most. <br>
+      Together, we can bridge the gap and build healthier communities.
+    </p>
+    <div style="margin-top: 20px;">
+      <a class="btn btn-light btn-lg" href="/doctorsignup" role="button" style="margin-right: 10px; font-weight: bold;">Apply Now</a>
+      <a class="btn btn-outline-light btn-lg" href="/doctorlogin" role="button" style="font-weight: bold;">Login</a>
+    </div>
+  </div>
+</div>
+
+<!-- Image Section -->
+<div style="background-color: #f8f9fa; padding: 30px 0;">
+  <div class="container text-center">
+    <img src="{% static 'hospital/images/healthcare.jpg' %}" alt="Healthcare" class="img-fluid" style="max-height: 400px; border-radius: 10px;">
+    <p class="mt-4" style="font-size: 1.2rem; color: #333;">Every act of kindness makes a difference. <br> Sponsor now to create a healthier tomorrow!</p>
+  </div>
+</div>
+
+<!-- Helpline Section -->
+<div style="background-color: #0056b3; color: white; padding: 20px 0;">
+  <div class="container text-center">
+    <h5>Need Assistance?</h5>
+    <p>Contact us 24/7 on our helpline number: <strong>1800-123-4567</strong></p>
+    <p>Email us at: <a href="mailto:support@medconnect.com" style="color: #ffea92;">support@medconnect.com</a></p>
+  </div>
+</div>
+
+{% endblock content %}

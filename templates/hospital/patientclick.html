@@ -1,0 +1,94 @@
+{% extends 'hospital/homebase.html' %}
+<!--
+Developed by: Sumit Kumar
+Facebook: fb.com/sumit.luv
+YouTube: youtube.com/lazycoders
+-->
+
+{% block content %}
+
+<style>
+  .hero-section {
+    background: linear-gradient(135deg, #1e88e5, #2196f3);
+    color: white;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .hero-section p.lead {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .hero-section .btn {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background-color: #1976d2;
+    border: none;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #1565c0;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .info-section {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 30px;
+    background: #f3f9ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1565c0;
+  }
+
+  .info-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+</style>
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <h1>Welcome, Dear Patient!</h1>
+  <p class="lead">Your health is our priority. Join our Hospital Management System and access services designed just for you.</p>
+  <a class="btn btn-primary btn-lg" href="/patientsignup" role="button">Register Now</a>
+  <a class="btn btn-primary btn-lg" href="/patientlogin" role="button">Login</a>
+</div>
+
+<!-- Information Section -->
+<div class="info-section">
+  <h2>Why Choose Us?</h2>
+  <p>
+    Our Hospital Management System is built to ensure that patients receive seamless healthcare support, from appointment bookings to treatment follow-ups. 
+    With a user-friendly interface and secure data handling, we bring advanced healthcare management to your fingertips.
+  </p>
+  <p>
+    Register today to manage your medical records, connect with top doctors, and gain access to a host of features that simplify your healthcare journey.
+  </p>
+</div>
+
+{% endblock content %}
